@@ -1,3 +1,15 @@
+.margin1{ margin: 15px; }
+
+p, h1, h2, dl, label{ color:white;; }
+
+div p{
+ 
+    font-size:1.2em;
+    
+}
+
+/*-------------------------------------------------------------Grid-------------------------------------------------------------*/
+
 main{ 
     
     display:grid;
@@ -8,24 +20,44 @@ main{
 }
 
 
-body{ margin-left: 0px; margin-right: 0px; } 
+body{
+    
+    margin-left: 0px;
+    margin-right: 0px; 
+    background-image:url('https://cdn.starwebserver.se/shops/agelito/files/koksbank-iconic-black.jpg');
+} 
 
 header{
 
     display:grid;
-    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 'header' 'header' 
-    
-       
+        
 }
 
-
-.div{
+#footer{
     
-     background-color: red;
-    height: 700px;
-  
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'footer' 'footer' 'footer';
+    border:1px solid black;
+}
+
+#FooterLatar{
+    
+    display:grid;
+    grid-template-rows: 300px 100px;
+    grid-template-areas: 'footer' 'footer'
+    
+}
+
+.MainDiv{
+ 
+     display:grid;
+     grid-template-rows: 300px 1fr 1fr 1fr 1fr 1fr;
+     grid-template-areas: 'Section' 'Section' 'Section' 'Section' 'Section' 'Section';
+     height: 2400px;
+    
 }
 
 
@@ -33,7 +65,6 @@ header{
 /* Klass som flyttar texten åt höger */
 .right{ text-align:right; }
 
-}
 
 @media screen and (max-width:960px){
     
@@ -43,52 +74,221 @@ header{
 
 /*---------------------------------------------------------------Listor----------------------------------------------------------*/
 
-.right: { text-align:right; 
-          vertical-align: text-top;
-            
-}
+.right{ margin-right: 1vw; }
+.right2{text-align:center; vertical-align:top; }
+.left{ margin-left: 1vw; }
 
 
 ul {
     
   list-style-type: none; 
-  
+  overflow: hidden;
   background-color: #333;
-  width: ;
 
     
-  
 }
+
 
 li{
     
     display: inline;  
     border-right: 1px solid #bbb;
     color:black;
-   
+      
 }
 
 
+
+
 li a {
-     
-  height:40px;
+      
   color: white;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
     
     
 }
 
+
 li a:hover {
     
   background-color: #111;
     
 }
+
  
 footer ul, footer li{
-
 
  background-color: white;
  display:block;
     
+    
+}
+
+.localMeny{
+    
+    list-style-type:none;
+    background-color:none;
+    display:block;
+    border:none;
+    overflow:hidden;
+}
+
+.localMenyWidth{
+    
+ width:60%;   
+ margin:0px;
+ padding:0px;
+    
+}
+
+.liInst{
+    text-align:center;
+}
+
+dt, dd, dl{
+ text-align:center;
+    margin:5px;
+}
+
+/*-----------------------------------------------------------Bilder-------------------------------------------------------------*/
+
+.img1{ 
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 20px;
+}
+
+.img2{ 
+
+width:50%;
+height:50%;
+display:block;
+      border-radius: 20px;
+
+}
+
+.img3{
+    
+        width: 300;
+        height: 600px;
+        display: block;
+      border-radius: 20px;
+  
+}
+    
+
+#bild1{ 
+    
+    height:300px;
+    width:500px;
+      border-radius: 20px;
+    
+}
+
+.bildGenrer{
+    
+    height:300px;
+    width:450px;
+    border-radius: 20px;
+}
+
+.bildInst{
+    height:300px;
+    width:450px;
+    border-radius: 20px;
+}
+
+/*---------------------------------------------------------Videor---------------------------------------------------------------*/
+
+iframe{
+    width:420px;
+    height:200px;
+}
+
+/*----------------------------------------------------------Tabeller------------------------------------------------------------*/
+
+table, tr, th, td{
+ 
+    border:1px solid black;
+    border-collapse: collapse;
+    padding:5px;
+    
+}
+
+tr, th, td{
+    
+    width:90px;
+    height:30px;
+    font-size:95%;
+    
+}
+
+table{
+    
+    margin-left:auto; 
+    margin-right:auto; 
+}
+
+td:nth-child(odd){
+
+    background-color:yellow;
+    
+}
+
+td:nth-child(even){
+    
+    background-color:cyan;
+
+}
+
+tr > th{
+ 
+    background-color:purple;
+    
+}
+
+p:first-letter
+{
+ font-size:1.4em;   
+}
+
+section::after { 
+    
+    margin:500px; 
+}
+
+section::before{ 
+    
+    margin:500px; 
+}
+
+/*-----------------------------------------------------------Länkar--------------------------------------------------------------*/
+
+a:link{
+ 
+    color:red;
+}
+
+a:visited{
+ 
+    color:yellow;
+    text-decoration:none;
+}
+
+a:focus{
+ 
+     font-size:0.8em; 
+}
+
+a:hover{
+ 
+    font-size:0.8em;
+}
+
+a:active{
+ 
+    color:yellow;
+    text-decoration:none;
+}
