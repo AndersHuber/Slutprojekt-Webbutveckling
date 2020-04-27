@@ -1,12 +1,10 @@
-.margin1{ margin: 15px; }
+.margin1{ margin: 1rem; }
 
-p, h1, h2, dl, label{ color:white;; }
+.cirklemargin{ margin-left:10vw; }
 
-div p{
- 
-    font-size:1.2em;
-    
-}
+p, h1, h2, dl, label{ color:hsla(360, 0%, 81%, 1);; }
+
+div p{ font-size:1.2em; }
 
 /*-------------------------------------------------------------Grid-------------------------------------------------------------*/
 
@@ -24,7 +22,7 @@ body{
     
     margin-left: 0px;
     margin-right: 0px; 
-    background-image:url('https://cdn.starwebserver.se/shops/agelito/files/koksbank-iconic-black.jpg');
+    background-color:rgba(28, 28, 28, 1);
 } 
 
 header{
@@ -41,6 +39,7 @@ header{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 'footer' 'footer' 'footer';
     border:1px solid black;
+     background-image:linear-gradient(to left, red, orange, yellow);
 }
 
 #FooterLatar{
@@ -48,6 +47,7 @@ header{
     display:grid;
     grid-template-rows: 300px 100px;
     grid-template-areas: 'footer' 'footer'
+    background-image:linear-gradient(to left, red, orange, yellow);
     
 }
 
@@ -192,19 +192,21 @@ display:block;
     height:300px;
     width:450px;
     border-radius: 20px;
+    transform: skewY(5deg);
 }
 
 .bildInst{
     height:300px;
     width:450px;
     border-radius: 20px;
+    transform: skewY(5deg);
 }
 
 /*---------------------------------------------------------Videor---------------------------------------------------------------*/
 
 iframe{
-    width:420px;
-    height:200px;
+    width:60ex;
+    height:35ex;
 }
 
 /*----------------------------------------------------------Tabeller------------------------------------------------------------*/
@@ -233,7 +235,7 @@ table{
 
 td:nth-child(odd){
 
-    background-color:yellow;
+    background-color:#FFFF00;
     
 }
 
@@ -254,26 +256,21 @@ p:first-letter
  font-size:1.4em;   
 }
 
-section::after { 
+ p>a::after{ 
     
-    margin:500px; 
-}
-
-section::before{ 
-    
-    margin:500px; 
+   content:" <--Läs mer här";
 }
 
 /*-----------------------------------------------------------Länkar--------------------------------------------------------------*/
 
 a:link{
  
-    color:red;
+    color:white;
 }
 
 a:visited{
  
-    color:yellow;
+    color:white;
     text-decoration:none;
 }
 
@@ -289,6 +286,6 @@ a:hover{
 
 a:active{
  
-    color:yellow;
+    color:white;
     text-decoration:none;
 }
