@@ -25,14 +25,6 @@ body{
     background-color:rgba(28, 28, 28, 1);
 } 
 
-header{
-
-    display:grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: 'header' 'header' 
-        
-}
-
 #footer{
     
     display:grid;
@@ -65,13 +57,6 @@ header{
 /* Klass som flyttar texten åt höger */
 .right{ text-align:right; }
 
-
-@media screen and (max-width:960px){
-    
-    main{ grid-column-gap: 50px; }   
-    
-    }
-
 /*---------------------------------------------------------------Listor----------------------------------------------------------*/
 
 .right{ margin-right: 1vw; }
@@ -79,51 +64,68 @@ header{
 .left{ margin-left: 1vw; }
 
 
-ul {
+footer ul{
     
   list-style-type: none; 
-  overflow: hidden;
-  background-color: #333;
-
+  display:block;
+    
     
 }
 
 
-li{
+footer li{
+    
+    border-right: 1px solid #bbb;
+    height:20px;
+    background-color: white;
+    display:block;
+    
+      
+}
+
+
+
+
+  footer a{
+      
+  color: white;
+  text-decoration: none;
+  height:20px;
+    
+    
+}
+
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+
+nav li{
     
     display: inline;  
     border-right: 1px solid #bbb;
     color:black;
+    float:left;
       
 }
 
 
 
 
-li a {
-      
+nav li a {
+  display: block;
   color: white;
+  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-    
-    
 }
 
 
-li a:hover {
-    
-  background-color: #111;
-    
-}
-
- 
-footer ul, footer li{
-
- background-color: white;
- display:block;
-    
-    
-}
 
 .localMeny{
     
@@ -153,28 +155,40 @@ dt, dd, dl{
 
 /*-----------------------------------------------------------Bilder-------------------------------------------------------------*/
 
-.img1{ 
+
+#img1{ 
         width: 100%;
         height: 100%;
         display: block;
         border-radius: 20px;
+        transition:none;
 }
 
-.img2{ 
+#img4{ 
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 20px;
+        transition:none;
+}
+
+#img2{ 
 
 width:50%;
 height:50%;
 display:block;
       border-radius: 20px;
+    transition:none;
 
 }
 
-.img3{
+#img3{
     
         width: 300;
         height: 600px;
         display: block;
       border-radius: 20px;
+    transition:none;
   
 }
     
@@ -183,24 +197,51 @@ display:block;
     
     height:300px;
     width:500px;
-      border-radius: 20px;
+    border-radius: 20px;
     
 }
 
 .bildGenrer{
     
-    height:300px;
-    width:450px;
+    height:20vh;
+    width:15vw;
     border-radius: 20px;
     transform: skewY(5deg);
+     transition: width 2s, height 2s;
 }
 
 .bildInst{
-    height:300px;
-    width:450px;
+     height:20vh;
+    width:15vw;
     border-radius: 20px;
     transform: skewY(5deg);
+     transition: width 2s, height 2s;
 }
+
+section>img:hover{
+ 
+    width:30vw;
+    height:40vh;
+    
+}
+
+
+.animeimg{
+    
+  margin-left: -85px;
+  width: 100px; 
+  height:250px;
+  transition: width 3s, height 3s, margin 3s;
+   
+}
+
+    img:hover{
+       
+      margin-left: -10px;
+      width: 120px; 
+      height:260px;
+}
+
 
 /*---------------------------------------------------------Videor---------------------------------------------------------------*/
 
@@ -282,6 +323,7 @@ a:focus{
 a:hover{
  
     font-size:0.8em;
+     background-color: #111;
 }
 
 a:active{
