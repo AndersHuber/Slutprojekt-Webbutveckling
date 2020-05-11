@@ -2,13 +2,15 @@
 
 .cirklemargin{ margin-left:10vw; }
 
-p, h1, h2, dl, label{ color:hsla(360, 0%, 81%, 1);; }
+p, h1, h2, dl, label, caption, legend{ color:hsla(360, 0%, 81%, 1); }
 
 div p{ font-size:1.2em; }
 
+.removephone{ display:none; }
+
 /*-------------------------------------------------------------Grid-------------------------------------------------------------*/
 
-main{ 
+#main{ 
     
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -31,15 +33,14 @@ body{
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 'footer' 'footer' 'footer';
     border:1px solid black;
-     background-image:linear-gradient(to left, red, orange, yellow);
+    background-image:linear-gradient(to left, red, orange, yellow);
 }
 
 #FooterLatar{
     
     display:grid;
     grid-template-rows: 300px 100px;
-    grid-template-areas: 'footer' 'footer'
-    background-image:linear-gradient(to left, red, orange, yellow);
+    grid-template-areas: 'footer' 'footer';
     
 }
 
@@ -130,7 +131,6 @@ nav li a {
 .localMeny{
     
     list-style-type:none;
-    background-color:none;
     display:block;
     border:none;
     overflow:hidden;
@@ -184,7 +184,7 @@ display:block;
 
 #img3{
     
-        width: 300;
+        width: 300px;
         height: 600px;
         display: block;
       border-radius: 20px;
@@ -224,24 +224,6 @@ section>img:hover{
     height:40vh;
     
 }
-
-
-.animeimg{
-    
-  margin-left: -85px;
-  width: 100px; 
-  height:250px;
-  transition: width 3s, height 3s, margin 3s;
-   
-}
-
-    img:hover{
-       
-      margin-left: -10px;
-      width: 120px; 
-      height:260px;
-}
-
 
 /*---------------------------------------------------------Videor---------------------------------------------------------------*/
 
@@ -330,4 +312,83 @@ a:active{
  
     color:white;
     text-decoration:none;
+}
+
+/*----------------------------------------------media queries--------------------------------------------------------------------*/
+
+@media screen and (max-width:600px) {
+    
+    .marginphone{margin-bottom:100px;}
+    
+    .removephone{display:unset;}
+   
+    body{ height:100vh;}
+    
+    .bildGenrer{
+        
+        height:15vh;
+        width:30vw;
+        transition:none;
+    }
+    
+      .bildInst{
+        
+        height:15vh;
+        width:30vw;
+        transition:none;
+    }
+
+    section>img:hover{ 
+        
+        height:15vh;
+        width:30vw;
+    
+    }
+
+    
+   #main{ 
+       
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'main';
+       
+ }
+    
+    footer, #footerlatar,#footer{
+        position:fixed;
+        bottom:0%; 
+        width:100vw;
+        height:10vh;}
+    
+    .remove{ display:none; }
+    
+    div p{
+        
+        font-size:0.8em;
+        width: 80vw;
+    }
+    
+    h1{ font-size: 1em; }
+    
+    nav li a { padding: 5px; }
+    
+    .right{ margin-right: 16vw; }
+    
+    #img4{
+    
+        height:400px;
+    }
+    
+  footer ul li{ 
+      
+      font-size: 0.5em;
+      margin-right: 30px;
+      
+    }
+    
+    footer ul{ margin-top:20px; }
+ 
+    iframe~p{font-size:0.5em;}
+    
+   .localText{ font-size: 1.5em;}
 }
