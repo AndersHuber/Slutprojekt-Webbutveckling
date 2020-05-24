@@ -5,7 +5,8 @@
 <head>
         
         <meta charset="UTF-8">
-         <meta content="width=device-width, initial-scale=1" name="viewport">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
         <link href="Index.css" rel="Stylesheet">
         <title> Formulär </title>           
          
@@ -53,9 +54,10 @@
     
      <main id="main">
           
+         <!--Divarna med "remove" klassen tas bort när sidan är i telefonvy-->
               <div class="div remove"> 
          
-  <h1 class="margin1" > Hjälp Mig! </h1>
+  <h2 class="margin1" > Hjälp Mig! </h2>
                   
                   <!--Bild-->
                   <img id="img2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQopmu4Gu1pOd6isQcY_z0zmg8RplKyuF8H_mHpnTcXCq91hrob" alt="Glasögon på en bok">
@@ -66,7 +68,8 @@
                   
                   <!--Taggen beskriver sig själv, area för text-->
                   <textarea id="Formulär" rows="4" cols="60">
-Skriv Vad som kan förbättras med sidan!
+                      
+                    Skriv Vad som kan förbättras med sidan!
                           
                   </textarea>
                   
@@ -76,22 +79,28 @@ Skriv Vad som kan förbättras med sidan!
                       <!--Används för att ge "grupperingen" en rubrik-->
                       <legend>Formulär</legend>
                       
+                      <!--action specifierar vart datan från formuläret ska skickas-->
                               <form action="Index.html">
-                      <section>
+                                  
+                                   <section>
+                                      
+                                       <!--Tar input(ditt namn) har en value som redan är satt som exempel-->
                                    <label for="Namn">Namn:</label>
-                                   <input id="resize" type="text" id="Namn" name="Namn" value="Anders">
+                                   <input type="text" id="Namn" name="Namn" value="Anders">
                           
                                   </section>
                                   
                                   <section>
                                       
+                                      <!--Tar input(ditt efternamn) har en value som redan är satt som exempel-->
                                    <label for="Efternamn">Efternamn:</label>
                                    <input type="text" id="Efternamn" name="Efternamn" value="Huber">
                                       
                                       </section>
                                   
                                   <section>
-                                      
+                                     
+                                     <!--Två st radio boxar för de olika könen, bara en går att kryssa i åt gången--> 
                                   <input type="radio" id="Man" name="Kön" value="Man">
                                    <label for="Man">Man</label>
                                       
@@ -99,6 +108,7 @@ Skriv Vad som kan förbättras med sidan!
                                   
                                   <section>
                                   
+                                      <!--Som förra-->
                                  <input type="radio" id="Kvinna" name="Kön" value="Kvinna" >
                                  <label for="Kvinna">Kvinna</label>
                                       
@@ -106,6 +116,7 @@ Skriv Vad som kan förbättras med sidan!
                                   
                                   <section>
                                   
+                                      <!--Checkar ifall man är över 18 år, är automatiskt inkryssad-->
                                   <input type="checkbox" id="Ålder" name="Ålder" value="Ålder" checked>
                                   <label for="Ålder">Över 18 år</label>
                                       
@@ -113,15 +124,18 @@ Skriv Vad som kan förbättras med sidan!
                                   
                                   <section>
                                   
+                         <!--Låter dig välja din födelsedags-datum, har ett minimum och maximum värde så att folk inte "trollar"-->
                                   <label for="Födelsedag">Födelsedag:</label>
-                                  <input type="date" id="Födelsedag" name="Födelsedag" min="1960-12-31" max="2002-12-31">
+                                  <input type="date" id="Födelsedag" name="Födelsedag" min="1920-12-31" max="2002-12-31">
                                       
                                       </section>
                                 
                                   <section>
-                                      
+                                     
+                                      <!--Rubrik för ett flervalsalternativ-->
                                     <label for="Uppdateringar">Välj vad du vill ska förbättras:</label>
 
+                              <!--flervalsalternativ, man kan välja respektive alternativ som visas, inget är automatiskt insatt-->
                                <select id="Uppdatering">
                                    
                                                      <option value="Videor">Fler videor</option>
@@ -136,6 +150,7 @@ Skriv Vad som kan förbättras med sidan!
                                   
                                   <section>
                                   
+                                      <!--Användarnamn, tar användarens input, måste vara inskrivet-->
                                   <label for="Användarnamn">Användarnamn:</label>
                                  <input type="text" id="Användarnamn" name="Användarnamn" required> 
                                       
@@ -143,6 +158,7 @@ Skriv Vad som kan förbättras med sidan!
                                   
                                   <section>
                                   
+                                <!--lösenord, tar användarens input, måste vara inskrivet-->
                                   <label for="Lösenord">Lösenord:</label>
                                   <input type="password" id="Lösenord" name="Lösenord" Value="Lös" required>
                                       
@@ -150,6 +166,7 @@ Skriv Vad som kan förbättras med sidan!
                                   
                                   <section>
                                   
+                             <!--Email, tar användarens input, måste vara inskrivet, ger ett exempel på mail till användaren--> 
                                    <label for="Email">Email:</label>
                                  <input type="email" id="Email" name="Email" placeholder="anhu@mail.com" required>
                                       
@@ -157,12 +174,14 @@ Skriv Vad som kan förbättras med sidan!
                                   
                                   <section>
                                   
+                                 <!--Påminner om att svara på allting, dyker upp längst upp på sidan som en notis-->
                                  <button type="button" onclick="alert('Svara på allting innan du skickar in!')">Click Me!</button>
                                       
                                       </section>
                                       
                                   <section>
                                   
+                                      <!--När man trycker på knappen submit skickas alla data till Index.html sidan-->
                                   <input type="submit" value="Submit">
                                       
                                       </section>
