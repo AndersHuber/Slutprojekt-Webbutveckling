@@ -1,15 +1,7 @@
-.margin1{ margin: 1rem; }
-
-.cirklemargin{ margin-left:10vw; }
-
-p, h1, h2, dl, label, caption, legend{ color:hsla(360, 0%, 81%, 1); }
-
-div p{ font-size:1.2em; }
-
-.removephone{ display:none; }
-
 /*-------------------------------------------------------------Grid-------------------------------------------------------------*/
 
+/*Id-selektor, gör så att ett område blir till en grid, som är indelad i tre vertikala områden med 50px utrymme mellan de*/
+/*Varje område heter 'main' och de har lika mycket utrymme*/
 #main{ 
     
     display:grid;
@@ -19,7 +11,8 @@ div p{ font-size:1.2em; }
     grid-column-gap: 50px; 
 }
 
-
+/*Typ-selektor, gör så att det inte finns något utrymme till höger och vänster till bodyn*/
+/*Sätter också bakgrundsfärgen till rgba-färg svart*/
 body{
     
     margin-left: 0px;
@@ -27,6 +20,8 @@ body{
     background-color:rgba(28, 28, 28, 1);
 } 
 
+/*id-selektor, delar in ett område i tre lika stora delar, namnger de 'footer' sätter en svart 1px tjock border runt området*/
+/*Använder också gradient, alltså skiftar bakgrundsfärgen mellan respektive färger i området, 20px radie runda hörn*/
 #footer{
     
     display:grid;
@@ -34,128 +29,117 @@ body{
     grid-template-areas: 'footer' 'footer' 'footer';
     border:1px solid black;
     background-image:linear-gradient(to left, red, orange, yellow);
+    border-radius: 20px;
 }
 
+/*id-selektor, gör en grid, delar in området i två delar som har olika mycket utrymme, namnger de 'footer', 20px radie runda hörn*/
 #FooterLatar{
     
     display:grid;
     grid-template-rows: 300px 100px;
-    grid-template-areas: 'footer' 'footer';
-    
+    grid-template-areas: 'footer' 'footer';  
+    border-radius: 20px;
 }
 
+/*klass-selektor, gör en grid, som delar upp et område i 6 delar, 5 som tar lika mycket plats efter den första fått sina 300px*/
+/*Namnger områderna 'section'*/
 .MainDiv{
  
      display:grid;
      grid-template-rows: 300px 1fr 1fr 1fr 1fr 1fr;
-     grid-template-areas: 'Section' 'Section' 'Section' 'Section' 'Section' 'Section';
-     height: 2400px;
-    
+     grid-template-areas: 'Section' 'Section' 'Section' 'Section' 'Section' 'Section';  
 }
-
-
-
-/* Klass som flyttar texten åt höger */
-.right{ text-align:right; }
 
 /*---------------------------------------------------------------Listor----------------------------------------------------------*/
 
-.right{ margin-right: 1vw; }
-.right2{text-align:center; vertical-align:top; }
+/*klass-selektor, centrerar texten till fönstret eller diven, höjer också upp det till toppen*/
+.right2{
+    
+    text-align: center;
+    vertical-align: top; 
+}
+
+/*klass-selektor, gör utrymmet till vänster om elementet till 1% av fönstrets bredd*/
 .left{ margin-left: 1vw; }
 
-
-footer ul{
+/*avkomlings-selektor, tar bort numrering eller prickar framför listan*/
+footer ul{ 
     
-  list-style-type: none; 
-  display:block;
-    
-    
+    list-style-type: none;
+    background-color: white;
 }
 
-
+/*avkomlings-selektor, gör så att varje li element efter footern har en höjd på 20pixlar, vit bakgrundsfärg*/
+/*Varje element tar upp en hel rad*/
 footer li{
     
-    border-right: 1px solid #bbb;
-    height:20px;
+    height: 20px;
     background-color: white;
-    display:block;
-    
-      
+    display: block;     
 }
 
+/*avkomlings-selektor, gör så att varje a element efter footern får höjd 20pixlar*/
+  footer a{ height: 20px; }
 
-
-
-  footer a{
-      
-  color: white;
-  text-decoration: none;
-  height:20px;
-    
-    
-}
-
-
+/*avkomlings-selektor, gör så att ul elementen i navbaren inte får något utrymme mellan eller utanför elementet*/
+/*Får grå-svart bakgrundsfärg, tar bort extra bakgrund som "flödar över", radie på 20px runda hörn*/
 nav ul {
-  list-style-type: none;
+    
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  border-radius: 20px;
 }
 
-
+/*Avkomlings-selektor, gör så att alla li elementen efter navbaren ligger på en rad, med 1 pixlar vit kant till höger*/
+/*Flyter alla element till vänster*/
 nav li{
     
     display: inline;  
     border-right: 1px solid #bbb;
-    color:black;
-    float:left;
-      
+    float: left;     
 }
 
-
-
-
+/*Gör alla li element efter nav och alla a element innanför dessa li element till att de tar upp en hel rads utrymme*/
+/*Centrerar texten, tar bort understrecken från länkarna och utrymme innanför(uppåt) är 14px, åt höger är det 16px*/
 nav li a {
+    
   display: block;
-  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
-
-
+/*Klass-selektor, tar bort "markören" framför elementet, elemtet tar upp en hel rad, tar bort eventuellt ärvd border*/
 .localMeny{
     
-    list-style-type:none;
-    display:block;
-    border:none;
-    overflow:hidden;
+    list-style-type: none;
+    display: block;
+    border: none;
 }
 
+/*klass-selektor, gör bredden av elemtet till 60% av ursprungliga, utrymmet innanför och utanför elementet blir 0*/
 .localMenyWidth{
     
- width:60%;   
- margin:0px;
- padding:0px;
-    
+     width: 60%;   
+     margin: 0px;
+     padding: 0px;
 }
 
-.liInst{
-    text-align:center;
-}
+/*klass-selektor, centrerar texten*/
+.liInst{ text-align: center;}
 
+/*grupp-selektor, centrerar listan i det utrymme den har, utrymmet utanför blir 5 pixlar*/
 dt, dd, dl{
- text-align:center;
-    margin:5px;
+    
+    text-align: center;
+    margin: 5px;
 }
 
 /*-----------------------------------------------------------Bilder-------------------------------------------------------------*/
 
-
+/*id-selektor, gör bild elementet till 100% höjd och bredd av utrymmet, tar upp hela utrymmet, får en kantradie på 20 pixlar*/
 #img1{ 
         width: 100%;
         height: 100%;
@@ -164,6 +148,7 @@ dt, dd, dl{
         transition:none;
 }
 
+/*Samma som förra, för denna och den andra tas transition också bort*/
 #img4{ 
         width: 100%;
         height: 100%;
@@ -172,158 +157,198 @@ dt, dd, dl{
         transition:none;
 }
 
+/*Samma som de två åvan fast bilden tar upp 50% av utrymmet*/
 #img2{ 
 
-width:50%;
-height:50%;
-display:block;
-      border-radius: 20px;
+    width:50%;
+    height:50%;
+    display:block;
+    border-radius: 20px;
     transition:none;
 
 }
 
+/*Samma som åvan, men bredd 300pixlar och höjd 600 pixlar*/
 #img3{
     
-        width: 300px;
-        height: 600px;
-        display: block;
-      border-radius: 20px;
+    width: 300px;
+    height: 600px;
+    display: block;
+    border-radius: 20px;
     transition:none;
   
 }
     
-
+/*id-selektor, gör bild bredden till 500 pixlar, höjden till 300 pixlar, får runda hörn med radien 20 pixlar*/
 #bild1{ 
     
     height:300px;
     width:500px;
-    border-radius: 20px;
-    
+    border-radius: 20px;   
 }
 
+/*klass-selektor, bilden får höjd 20% av dokument fönstret, bredd 15% av dokumentfönstret, runda hörn med radien 20 pixlar*/
+/*Lutar 5 grader, höjd och bredd omvandlas på 2 sekunder, när man håller musen på den*/
 .bildGenrer{
     
     height:20vh;
     width:15vw;
     border-radius: 20px;
     transform: skewY(5deg);
-     transition: width 2s, height 2s;
+    transition: width 2s, height 2s;
 }
 
+/*Samma som förra men för en annan sida*/
 .bildInst{
-     height:20vh;
+    
+    height:20vh;
     width:15vw;
     border-radius: 20px;
     transform: skewY(5deg);
-     transition: width 2s, height 2s;
+    transition: width 2s, height 2s;
 }
 
+/*barnselektor, alla img element direkt efter section kommer ha respektive höjd och bredd när man drar musen över de */
 section>img:hover{
  
-    width:30vw;
-    height:40vh;
-    
+    width: 30vw;
+    height: 40vh;  
 }
 
 /*---------------------------------------------------------Videor---------------------------------------------------------------*/
 
+/*typ-selektor, ändrar höjden på iframe till 35gånger höjden på lilla x och bredden till 60 gånger lilla x, 20px radie hörn*/
 iframe{
-    width:60ex;
-    height:35ex;
+    
+    width: 60ex;
+    height: 35ex;
+    border-radius: 20px;
 }
+
+/*20px radie runda hörn*/
+video{ border-radius: 20px; }
 
 /*----------------------------------------------------------Tabeller------------------------------------------------------------*/
 
+/*gruppselektor, gör en border runt alla element, kollapsar de, gör utrymmet innuti varje element till 5 pixlar*/
 table, tr, th, td{
  
-    border:1px solid black;
+    border: 1px solid black;
     border-collapse: collapse;
-    padding:5px;
-    
+    padding: 5px;    
 }
 
+/*gruppselektor, ändrar bredd och höjd på elementen till 90 pixlar o 30 pixlar, fontstorleken blir 95% av ursprungliga*/
 tr, th, td{
     
-    width:90px;
-    height:30px;
-    font-size:95%;
-    
+    width: 90px;
+    height: 30px;
+    font-size: 95%;   
 }
 
+/*centrerar table elementet, genom att automatiskt bestämma utrymme till vänster och höger*/
 table{
     
-    margin-left:auto; 
-    margin-right:auto; 
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
-td:nth-child(odd){
+/*För alla udda td element så blir bakgrundsfärgen gul*/
+td:nth-child(odd){ background-color: #FFFF00; } 
 
-    background-color:#FFFF00;
-    
-}
+/*För alla jämna td element så blir bakgrundsfärgen cyan*/
+td:nth-child(even){ background-color: cyan; }
 
-td:nth-child(even){
-    
-    background-color:cyan;
+/*barnselektor, alla th element som ligger direkt efter tr element får bakgrundsfärg lila*/
+tr > th{ background-color: purple; }
 
-}
+/*Pseudoelement, gör font-storleken för alla p taggar som ligger först i ett område till 1.4ggr normal storleken*/
+p::first-letter{ font-size: 1.4em;}
 
-tr > th{
- 
-    background-color:purple;
-    
-}
-
-p:first-letter
-{
- font-size:1.4em;   
-}
-
- p>a::after{ 
-    
-   content:" <--Läs mer här";
-}
+/*pseudoelement, a element, direkt efter p element kommer ha "content" texten direkt efter a-elementet*/
+ p>a::after{ content:" <--Läs mer här"; }
 
 /*-----------------------------------------------------------Länkar--------------------------------------------------------------*/
 
-a:link{
- 
-    color:white;
-}
+/*pseudoklass, gör att alla obesökta länkar blir vita*/
+a:link{ color: white; }
 
+/*pseudo-klass, gör alla besökta länkar vita samt tar bort understrykningen*/
 a:visited{
  
-    color:white;
-    text-decoration:none;
+    color: white;
+    text-decoration: none;
 }
 
-a:focus{
- 
-     font-size:0.8em; 
-}
+/*När man fokuserar på elementet genom tangentbordet blir font-storleken 80% av ursprungliga elementets font-size*/
+a:focus{ font-size: 0.8em; }
 
+/*samma sak som åvan fast för musen och bakgrundsfärgen blir mörkgrå*/
 a:hover{
  
-    font-size:0.8em;
+     font-size: 0.8em;
      background-color: #111;
 }
 
+/*pseudo-klass, för alla aktiva länkar, gör färgen vit, med ingen understrykning*/
 a:active{
  
-    color:white;
-    text-decoration:none;
+    color: white;
+    text-decoration: none;
 }
+
+/*---------------------------------------------------Utrymme---------------------------------------------------------------------*/
+
+/*klass-selektor som gör utrymmet til höger till 1% av fönstrets bredd*/
+.right{ margin-right: 1vw; }
+
+/*klass-selektor, gör uttrymmet utanför taggen till 1 rem*/
+.margin1{ margin: 1rem; }
+
+/*Klass-selektor, gör utrymmet åt vänster utanför taggen till 10vw*/
+.cirklemargin{ margin-left:10vw; }
+
+/*---------------------------------------------------Text------------------------------------------------------------------------*/
+
+/* Klass-selektor som flyttar texten åt höger */
+.right{ text-align:right; }
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('Nedladdningar/Fonts/Comfortaa.zip/Comfortaa-Light.eot');
+}
+
+
+/*grupp-selektor, gör alla taggarna som är visade(som inehåller text) till färgen grå*/
+p, h1, h2, h3, dl, label, caption, legend, iframe+p, video+p{ 
+    
+    color:hsla(360, 0%, 81%, 1);
+    font-family: 'Comfortaa';
+    transition: font-size 5s;
+}
+
+/*avkomlings-selektor, gör alla p-taggar efter div element till font storleken 120% av det ursprungliga storleken*/
+div p{ font-size:1.2em; }
+
+/*------------------------------------------------Övrigt-------------------------------------------------------------------------*/
+
+
+/*Sätter alla taggar som har den här klassen, eller ärven den här klassen till att inte visas*/
+/*Ingen utrymme tas alltså upp*/
+.removephone{ display:none; }
 
 /*----------------------------------------------media queries--------------------------------------------------------------------*/
 
+/*Gör så att css:en bara tillämpas när skärmens bredd är mindre än 600 pixlar*/
 @media screen and (max-width:600px) {
     
+    /*Gör så att utrymmet under elementet blir 100 pixlar*/
     .marginphone{margin-bottom:100px;}
     
+    /*Gör så att element och ärvande element "dyker upp", motsattsen mot display:none*/
     .removephone{display:unset;}
-   
-    body{ height:100vh;}
     
+    /*Ändrar höjd och bredd på bild, tar bort transition*/
     .bildGenrer{
         
         height:15vh;
@@ -331,6 +356,7 @@ a:active{
         transition:none;
     }
     
+        /*Samma som förra men för en annan sida*/
       .bildInst{
         
         height:15vh;
@@ -338,57 +364,63 @@ a:active{
         transition:none;
     }
 
-    section>img:hover{ 
-        
-        height:15vh;
-        width:30vw;
-    
-    }
-
-    
+    /*Delar upp main i en spalt och lägger alla sections under varandra*/
    #main{ 
        
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
-    grid-template-areas: 'main';
-       
+    grid-template-areas: 'main'; 
  }
     
+    /*footern blir fixerad längst ned på skärmen hela tiden, tar upp hela dokumentfönstrets bredd och får höjden 10% av sidan*/
     footer, #footerlatar,#footer{
+        
         position:fixed;
         bottom:0%; 
         width:100vw;
-        height:10vh;}
+        height:10vh;
+    }
     
+    /*Tar bort element*/
     .remove{ display:none; }
     
+    /*Ändrar alla p-elements fontstorlek innuti div element till 80% av ursprungliga storlek*/
+    /*P taggarna ändras till 80% av fönstrets bredd*/
     div p{
         
         font-size:0.8em;
         width: 80vw;
     }
     
+    /*h1 taggarna får font storleken 100%*/
     h1{ font-size: 1em; }
     
+    /*för li elementen i navigationsmenyn så får de 5 pixlars utrymme innuti elementen*/
     nav li a { padding: 5px; }
     
+    /*gör så att utrymmet utanför elementet blir 16% av fönstrets bredd*/
     .right{ margin-right: 16vw; }
     
-    #img4{
+    /*sätter höjden till 400 pixlar för ett element*/
+    #img4{ height:400px; }
     
-        height:400px;
-    }
-    
-  footer ul li{ 
+    /*sätter li taggen under ul elementet under footern till 50% ursprungliga storlek med utrymme till höger på 30 pixlar*/
+     footer ul li{ 
       
       font-size: 0.5em;
-      margin-right: 30px;
-      
-    }
+      margin-right: 30px; 
+   }
     
+    /*sätter utrymme åvanför elementet till 20 pixlar*/
     footer ul{ margin-top:20px; }
  
+    /*sätter fontstorleken till 50% för p element direkt under iframe element*/
     iframe~p{font-size:0.5em;}
     
+    /*sätter fontstorleken för elementet till 150%*/
    .localText{ font-size: 1.5em;}
+    
+    /*sätter fontstorleken för elementet till 60%*/
+    iframe+p,video+p{ font-size: 0.8em;}
+    
 }
