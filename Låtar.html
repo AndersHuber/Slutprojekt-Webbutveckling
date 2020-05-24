@@ -6,6 +6,8 @@
         
         <meta charset="UTF-8">
         <link href="Index.css" rel="Stylesheet">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
         <title> Låtar </title>           
          
 </head> 
@@ -14,13 +16,12 @@
     
         <header>
         
-        <h1 class="left"> Huvudsida </h1>
+        <h1 class="left"> Låtar </h1>
        
          <h1 class="right"> Anders Musik Hemsida</h1>
             
 
-       
-        <nav> 
+          <nav> 
             
             <ul>
                 
@@ -29,11 +30,15 @@
                 </li>
                 
                  <li>
-                     <a href="https://teknikum.se/">News</a>
+                     <a href="Låtar.html">Låtar</a>
                 </li>
                 
                  <li>
-                     <a href="https://teknikum.se/">Contact</a>
+                     <a href="Instrument.html">Instrument</a>
+                </li>
+                
+                <li>
+                     <a href="Genrer.html">Genrer</a>
                 </li>
                 
                  <li>
@@ -46,33 +51,34 @@
           
     </header>
     
-       <main>
+       <main id="main">
             
               <div> 
                   
+                  <!--Lokal meny, letar upp id:n som angets i sidan och sedan "drar" skärmen dit.-->
                                  <section>
                    
                <ul class="localMeny localMenyWidth"> 
                    
                 <li class="localMeny">
-                     <a href="#Queen">Queen-Bohemian Rhapsody</a>
+                     <a href="#Queen"   class="localText">Queen-Bohemian Rhapsody</a>
                 </li>
                 
                  <li class="localMeny">
-                     <a href="#Eminem">Eminem-Love Yourself</a>
+                     <a href="#Eminem"  class="localText">Eminem-Love Yourself</a>
                 </li>
                 
                  <li class="localMeny">
-                     <a href="#Nirvana">Nirvana-Teen Spirit</a>
+                     <a href="#Nirvana" class="localText">Nirvana-Teen Spirit</a>
                 </li>
                 
                  <li class="localMeny">
-                     <a href="#Jeff">Jeff Buckley- Halleluja</a>
+                     <a href="#Jeff" class="localText">Jeff Buckley- Halleluja</a>
                 </li>
                    
                     <li class="localMeny">
                         
-                     <a href="#Michael">Michael Jackson-Billie Jean</a>
+                     <a href="#Michael" class="localText">Michael Jackson-Billie Jean</a>
                 </li>
                 
                            
@@ -85,10 +91,16 @@
            
               <div class="div"> 
                   
-                      <h1> Bra låtar </h1> 
+                      <h2> Bra låtar </h2> 
                   
                   <section id="Queen">
-                  <iframe width="930" height="523" src="https://www.youtube.com/embed/fJ9rUzIMcZQ"  allowfullscreen></iframe>
+                      
+                      <!--Iframe är när man tar youtubes videor och använder de på sin egna sida--->
+                 <video width="420" height="240" controls>
+                     
+            <source src="2020-05-18 10-47-50_Trim (1).mp4" type="video/mp4">
+                     
+                </video>
                   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum mauris nec purus aliquet, efficitur egestas nisi tempor. Nam rhoncus aliquam nibh vel finibus. Nam eleifend, nisl condimentum feugiat iaculis, orci erat pharetra massa, quis egestas nulla ante sit amet dui. Curabitur eget commodo diam. Vestibulum molestie enim sit amet vulputate lobortis. Donec dignissim lacus non dui dictum hendrerit. Nullam a justo elit. Duis et bibendum nulla. </p>
                       </section>
                   
@@ -107,7 +119,7 @@
                     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum mauris nec purus aliquet, efficitur egestas nisi tempor. Nam rhoncus aliquam nibh vel finibus. Nam eleifend, nisl condimentum feugiat iaculis, orci erat pharetra massa, quis egestas nulla ante sit amet dui. Curabitur eget commodo diam. Vestibulum molestie enim sit amet vulputate lobortis. Donec dignissim lacus non dui dictum hendrerit. Nullam a justo elit. Duis et bibendum nulla. </p>
                       </section>
                   
-                  <section id="Michael">
+                  <section id="Michael" class="marginphone">
                   <iframe width="697" height="523" src="https://www.youtube.com/embed/Zi_XLOBDo_Y" allowfullscreen></iframe>
                         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas bibendum mauris nec purus aliquet, efficitur egestas nisi tempor. Nam rhoncus aliquam nibh vel finibus. Nam eleifend, nisl condimentum feugiat iaculis, orci erat pharetra massa, quis egestas nulla ante sit amet dui. Curabitur eget commodo diam. Vestibulum molestie enim sit amet vulputate lobortis. Donec dignissim lacus non dui dictum hendrerit. Nullam a justo elit. Duis et bibendum nulla. </p>
                       </section>
@@ -118,23 +130,29 @@
            </div>
            
               <div> 
-           
+                  
            </div>
                         
        </main>
     
+    <!--Sidans fot-->
     <footer id="FooterLatar" >
         
                          <section>
             
+                             <!--Skapar en tabell-->
                                 <table>
-                                    
+                                   
+                                    <!--Tabellens rubrik-->
                                     <caption> De bästa låtarna senaste 20 åren</caption>
-                                      
+                                     
+                                    <!--Delar in tabellen-->
                                     <thead>
-                                        
+                                       
+                                        <!--Tabell rader-->
                                      <tr>
-                                         
+                                        
+                                         <!--Rubrik för tabell data-->
                                         <th>Rank</th>
                                         <th>1</th>
                                         <th>2</th> 
@@ -151,10 +169,12 @@
                                         
                                     </thead>
                                     
+                                     <!--Delar in tabellen-->
                                     <tbody>
                                         
                                     <tr>
                                         
+                                        <!--Tabell data, texten som finns i tabellen-->
                                         <td>Artist</td>
                                         <td>Ed Sheeran</td> 
                                         <td>Lewis Capaldi</td> 
@@ -203,6 +223,7 @@
                                         
                                     </tbody>
                                     
+                                     <!--Delar in tabellen-->
                                     <tfoot>
                                         
                                      <tr>
