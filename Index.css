@@ -1,3 +1,9 @@
+/*Regel för fonts, sätter först namnet på fonten sen letar upp det nedladdade fonten i din Downloads folder*/
+@font-face{
+  font-family: 'Comfortaa', cursive;
+  src: url('Fonts/Comfortaa-Light.ttf');
+}
+
 /*-------------------------------------------------------------Grid-------------------------------------------------------------*/
 
 /*Id-selektor, gör så att ett område blir till en grid, som är indelad i tre vertikala områden med 50px utrymme mellan de*/
@@ -312,12 +318,6 @@ a:active{
 
 /* Klass-selektor som flyttar texten åt höger */
 .right{ text-align:right; }
-
-@font-face {
-  font-family: 'Comfortaa';
-  src: url('Nedladdningar/Fonts/Comfortaa.zip/Comfortaa-Light.eot');
-}
-
 
 /*grupp-selektor, gör alla taggarna som är visade(som inehåller text) till färgen grå*/
 p, h1, h2, h3, dl, label, caption, legend, iframe+p, video+p{ 
